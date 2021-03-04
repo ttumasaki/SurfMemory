@@ -1,73 +1,76 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+## 【アプリケーション名】
+ # サーフメモリーズ
+  
+## 【アプリケーション概要】
+多くのサーファーが欲しがっている「波の情報」を集積するアプリです。  
+  
+風の向きや強さ  
+潮の満ち引き  
+気圧の変化  
+地形の微妙な変化によって  
+刻一刻と変化する波。  
+  
+そんな波の情報を情報を皆で集めることで、より広範囲に、より効率的に  
+各ポイントの状況を把握し、自分なりに予測を立てて、最高の波を当てる。  
+そんな手助けができればと思ってこのアプリを開発をしました。  
+  
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+## 【URL】  
+  
 
-## About Laravel
+## 【テスト用アカウント】  
+  
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 【利用方法】  
+1.アプリにログインをすると過去の波情報を最新から降順に  
+&nbsp;&nbsp;時系列で確認ができます。  
+2.確認したいポイントを検索することで指定のポイントに絞って  
+&nbsp;&nbsp;情報を確認することができます。  
+3.自分が波を確認したら、情報を投稿し、波情報を共有できます。  
+4.間違えた情報を投稿してしまった場合には修正できます。  
+5.投稿した情報は削除することもできます。  
+  
+## 【目指した課題解決】  
+全てのサーファーにとって寝ても覚めても気になる波の情報。  
+どこのポイントでサーフィンしようか迷っている人が  
+これからの波の状況を予測をする手助けになればと思い、  
+このアプリを開発しました。  
+  
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 【洗い出した要件】  
+＜性別＞  
+&nbsp;男性  
+＜年齢＞  
+&nbsp;30歳  
+＜職業＞  
+&nbsp;人材派遣の営業職  
+＜住んでいる場所＞  
+&nbsp;愛知県名古屋市（海までは少し遠い）  
+＜趣味＞  
+&nbsp;サーフィン、キャンプ  
+＜経済状況＞  
+&nbsp;年収400万円程度  
+＜価値観＞  
+&nbsp;仕事もプライベートも充実させたいと思っている。  
+&nbsp;明るい性格ではあるが、年齢的に家庭を持つ友達も増え、  
+&nbsp;交友関係は年々狭まってきていることに若干の寂しさを感じている。  
+&nbsp;時間を大切にするタイプで、せっかくやるなら何でも楽しみたいと  
+&nbsp;考えている。  
+＜日常の過ごし方＞  
+&nbsp;仕事が忙しく、平日は仕事を頑張り、家に帰ってからは少しテレビや  
+&nbsp;youtubeを見て、明日に備えて早めに寝ている。  
+&nbsp;休日は平日に溜まったストレスを発散するためにも、自分の趣味である  
+&nbsp;サーフィンを思い切り楽しみたいと考えている。  
+  
+## 【実装した機能についてのGIFと説明】  
+  
+  
+## 【実装予定の機能】
+1.会員登録機能を実装。  
+2.投稿をした会員のみが情報の編集、削除ができる様にする。  
+3.静止画と動画も投稿できる様にする。  
+  
+## 【データベース設計】
+  
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-# SurfMemory
+## 【ローカルでの動作方法】
