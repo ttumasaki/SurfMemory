@@ -14,6 +14,7 @@ class memorycontroller extends Controller
     public function index()
     {
         //
+        return view('memory.index');
     }
 
     /**

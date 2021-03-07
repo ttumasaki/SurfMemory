@@ -12,8 +12,15 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('memory/index');
 });
 
 
-Route::resource('memories','MemoryController');
+
+
+Route::group(['prefix' => 'memory'],function(){
+    Route::get('index','MemoryController@index')->name('memory.index');
+});
+// Auth::routes();
+
+// Route::get('/home', 'HomeController@index')->name('home');
