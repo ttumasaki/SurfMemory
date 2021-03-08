@@ -10942,3 +10942,7 @@ a.text-dark:focus {
   }
 }
 
+.btn{
+  margin: 10px;
+  border: outset;
+}
