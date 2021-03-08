@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 use App\Models\Memory;
 
+use Illuminate\Support\Facades\DB;
+
+use App\Services\CheckFormData;
+
 class MemoryController extends Controller
 {
     /**
@@ -15,8 +19,19 @@ class MemoryController extends Controller
      */
     public function index()
     {
-        //
-        return view('memory.index');
+        $memories=DB::table('Memory')
+                        ->orderBy('date','desc')
+                        ->first();
+        // $memories = Memory::first();
+
+        $size =CheckFormData::checkSize($memories);
+        $w_condition =CheckFormData::checkW_condition($memories);
+        $number =CheckFormData::checkNumber($memories);
+        $state =CheckFormData::checkState($memories);
+        $direction =CheckFormData::checkDirection($memories);
+        $people =CheckFormData::checkPeople($memories);
+
+        return view('memory.index',compact('memories','size','w_condition','number','state','direction','people'));
     }
 
     /**

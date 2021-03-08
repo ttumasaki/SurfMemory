@@ -10942,7 +10942,7 @@ a.text-dark:focus {
   }
 }
 
-.btn{
-  margin: 10px;
-  border: outset;
+.post_brm{
+  padding: 5px;
+  font-size: large;
 }
