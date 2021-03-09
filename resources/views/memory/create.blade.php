@@ -113,9 +113,6 @@
                           <option value="6">51人〜</option>
                         </select><br>
 
-                      <!-- 波の画像・動画(任意)<br>
-                      <input type="file" name="image" multiple accept=".png,.jpg,.gif,.image/jpg,image/gif,.heic,.mov,.mp4"><br> -->
-
                     <input type="submit" class="btn btn-info" value="登録する">
                   </form>
                 </div>

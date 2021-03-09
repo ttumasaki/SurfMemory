@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class Memory extends Model
 {
     //
-    protected $table = 'memory';
+    protected $table = 'memories';
 }

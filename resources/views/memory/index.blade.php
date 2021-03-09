@@ -29,7 +29,7 @@
                 風向き:{{ $direction }}<br>
                 人数:{{ $people }}<br>
               </p>
-              <a href="#" class="btn btn-primary">編集</a>
+              <a href="{{route('memory.edit',[ 'id' => $memories->id ])}}" class="btn btn-primary">編集</a>
               <a href="#" class="btn btn-primary">削除</a>
             </div>
           </div>

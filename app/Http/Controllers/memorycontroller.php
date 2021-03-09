@@ -19,9 +19,11 @@ class MemoryController extends Controller
      */
     public function index()
     {
-        $memories=DB::table('Memory')
+        $memories = DB::table('memories')
                         ->orderBy('date','desc')
                         ->first();
+
+
         // $memories = Memory::first();
 
         $size =CheckFormData::checkSize($memories);
@@ -71,17 +73,6 @@ class MemoryController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
@@ -89,7 +80,9 @@ class MemoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $memories = Memory::find($id);
+
+        return view('memory.edit',compact('memories'));
     }
 
     /**
