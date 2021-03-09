@@ -24,6 +24,7 @@ Route::group(['prefix' => 'memory'],function(){
     Route::post('store','MemoryController@store')->name('memory.store');
     Route::get('edit/{id}','MemoryController@edit')->name('memory.edit');
     Route::post('update/{id}','MemoryController@update')->name('memory.update');
+    Route::post('destroy/{id}','MemoryController@destroy')->name('memory.destroy');
 });
 // Auth::routes();
 

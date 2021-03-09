@@ -23,9 +23,6 @@ class MemoryController extends Controller
                         ->orderBy('date','desc')
                         ->first();
 
-
-        // $memories = Memory::first();
-
         $size =CheckFormData::checkSize($memories);
         $w_condition =CheckFormData::checkW_condition($memories);
         $number =CheckFormData::checkNumber($memories);
@@ -120,5 +117,9 @@ class MemoryController extends Controller
     public function destroy($id)
     {
         //
+        $memories = Memory::find($id);
+        $memories->delete();
+
+        return redirect('memory/index');
     }
 }

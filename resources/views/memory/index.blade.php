@@ -29,8 +29,14 @@
                 風向き:{{ $direction }}<br>
                 人数:{{ $people }}<br>
               </p>
-              <a href="{{route('memory.edit',[ 'id' => $memories->id ])}}" class="btn btn-primary">編集</a>
-              <a href="#" class="btn btn-primary">削除</a>
+              <form method="GET" action="{{route('memory.edit',[ 'id' => $memories->id ])}}">
+                @csrf
+                <input class="btn btn-primary" type="submit" value="編集する">
+              </form>
+              <form method="POST" action="{{route('memory.destroy',[ 'id' => $memories->id ])}}" id="delete_{{ $memories->id }}">
+                @csrf
+                <a href="#" class="btn btn-danger" data-id="{{ $memories->id }}" onclick="deletePost(this);">削除する</a>
+              </form>
             </div>
           </div>
           @endforeach
@@ -40,4 +46,15 @@
         </div>
     </div>
 </div>
+
+<!-- 削除ボタンを押した際に確認メッセージが出る様に設定 -->
+<script>
+function deletePost(e){
+    'use strict';
+    if(confirm('本当に削除していいですか？')){
+        document.getElementById('delete_'+ e.dataset.id).submit();
+    }
+}
+</script>
+
 @endsection
