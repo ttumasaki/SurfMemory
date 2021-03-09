@@ -24,7 +24,7 @@
                     </div>
                     @endif
 
-                    <form method="POST" action="{{route('memory.store')}}">
+                    <form method="POST" action="{{route('memory.update',['id' => $memories->id])}}">
                     @csrf
 
                       確認ポイント(必須)<br>
@@ -113,7 +113,7 @@
                           <option value="6" @if($memories->people === 6) selected @endif>51人〜</option>
                         </select><br>
 
-                    <input type="submit" class="btn btn-info" value="登録する">
+                    <input type="submit" class="btn btn-info" value="更新する">
                   </form>
                 </div>
             </div>

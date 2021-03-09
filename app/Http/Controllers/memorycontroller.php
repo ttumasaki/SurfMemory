@@ -95,6 +95,20 @@ class MemoryController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $memories = Memory::find($id);
+
+        $memories->point = $request->input('point');
+        $memories->date = $request->input('date');
+        $memories->size = $request->input('size');
+        $memories->w_condition = $request->input('w_condition');
+        $memories->number = $request->input('number');
+        $memories->state = $request->input('state');
+        $memories->direction = $request->input('direction');
+        $memories->people = $request->input('people');
+
+        $memories->save();
+
+        return redirect('memory/index');
     }
 
     /**

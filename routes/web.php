@@ -23,6 +23,7 @@ Route::group(['prefix' => 'memory'],function(){
     Route::get('create','MemoryController@create')->name('memory.create');
     Route::post('store','MemoryController@store')->name('memory.store');
     Route::get('edit/{id}','MemoryController@edit')->name('memory.edit');
+    Route::post('update/{id}','MemoryController@update')->name('memory.update');
 });
 // Auth::routes();
 
