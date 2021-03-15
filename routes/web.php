@@ -16,8 +16,6 @@ Route::get('/', function () {
 });
 
 
-
-
 Route::group(['prefix' => 'memory'],function(){
     Route::get('index','MemoryController@index')->name('memory.index');
     Route::get('create','MemoryController@create')->name('memory.create');

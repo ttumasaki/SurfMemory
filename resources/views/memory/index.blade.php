@@ -13,33 +13,34 @@
 
           <!-- カードここから -->
           @if(!empty($memories))
+
             @foreach($memories as $memory)
-            <div class="card" style="width: 18rem;">
-              <div class="card-body">
-                <h5 class="card-title">
-                  【確認日時】<br>
-                  {{ $memory->date }}<br>
-                  【確認ポイント】<br>
-                  {{ $memory->point }}
-                </h5>
-                <p class="card-text">
-                  波のサイズ：{{ $size }}<br>
-                  面の状況:{{ $w_condition }}<br>
-                  波数:{{ $number }}<br>
-                  波の状態:{{ $state }}<br>
-                  風向き:{{ $direction }}<br>
-                  人数:{{ $people }}<br>
-                </p>
-                <form method="GET" action="{{route('memory.edit',[ 'id' => $memories->id ])}}">
-                  @csrf
-                  <input class="btn btn-primary" type="submit" value="編集する">
-                </form>
-                <form method="POST" action="{{route('memory.destroy',[ 'id' => $memories->id ])}}" id="delete_{{ $memories->id }}">
-                  @csrf
-                  <a href="#" class="btn btn-danger" data-id="{{ $memories->id }}" onclick="deletePost(this);">削除する</a>
-                </form>
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    【確認日時】<br>
+                    {{ $memory->date }}<br>
+                    【確認ポイント】<br>
+                    {{ $memory->point }}
+                  </h5>
+                  <p class="card-text">
+                    波のサイズ：{{ $size }}<br>
+                    面の状況:{{ $w_condition }}<br>
+                    波数:{{ $number }}<br>
+                    波の状態:{{ $state }}<br>
+                    風向き:{{ $direction }}<br>
+                    人数:{{ $people }}<br>
+                  </p>
+                  <form method="GET" action="{{route('memory.edit',[ 'id' => $memories->id ])}}">
+                    @csrf
+                    <input class="btn btn-primary" type="submit" value="編集する">
+                  </form>
+                  <form method="POST" action="{{route('memory.destroy',[ 'id' => $memories->id ])}}" id="delete_{{ $memories->id }}">
+                    @csrf
+                    <a href="#" class="btn btn-danger" data-id="{{ $memories->id }}" onclick="deletePost(this);">削除する</a>
+                  </form>
+                </div>
               </div>
-            </div>
             @endforeach
           @else
             投稿がありません

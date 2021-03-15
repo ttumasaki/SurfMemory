@@ -10,6 +10,9 @@ use Illuminate\Support\Facades\DB;
 
 use App\Services\CheckFormData;
 
+use Illuminate\Database\Eloquent\Collection;
+
+
 class MemoryController extends Controller
 {
     /**
@@ -19,10 +22,18 @@ class MemoryController extends Controller
      */
     public function index()
     {
-        $memories = DB::table('memories')
+        $data = DB::table('memories')
+                        ->select('id','date','point','size','w_condition','number','state','direction','people')
                         ->orderBy('date','desc')
-                        ->first();
+                        ->get();
 
+    
+        $memories = collect($data)->all();
+
+        // $memories = Memory::first();
+
+        var_dump($memories);
+                        
         $size =CheckFormData::checkSize($memories);
         $w_condition =CheckFormData::checkW_condition($memories);
         $number =CheckFormData::checkNumber($memories);
@@ -52,18 +63,18 @@ class MemoryController extends Controller
      */
     public function store(Request $request)
     {
-        $memory = new Memory;
+        $memories = new Memory;
 
-        $memory->point = $request->input('point');
-        $memory->date = $request->input('date');
-        $memory->size = $request->input('size');
-        $memory->w_condition = $request->input('w_condition');
-        $memory->number = $request->input('number');
-        $memory->state = $request->input('state');
-        $memory->direction = $request->input('direction');
-        $memory->people = $request->input('people');
+        $memories->point = $request->input('point');
+        $memories->date = $request->input('date');
+        $memories->size = $request->input('size');
+        $memories->w_condition = $request->input('w_condition');
+        $memories->number = $request->input('number');
+        $memories->state = $request->input('state');
+        $memories->direction = $request->input('direction');
+        $memories->people = $request->input('people');
 
-        $memory->save();
+        $memories->save();
 
         return redirect('memory/index');
     
