@@ -29,10 +29,10 @@ class MemoryController extends Controller
 
     
         $memories = collect($data)->all();
+        optional($memories);
 
+        // dd($memories);
         // $memories = Memory::first();
-
-        var_dump($memories);
                         
         $size =CheckFormData::checkSize($memories);
         $w_condition =CheckFormData::checkW_condition($memories);
