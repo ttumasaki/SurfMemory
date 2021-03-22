@@ -15,6 +15,8 @@ class CheckFormData
     if($data->size === 8){$size = 'カタ〜アタマ';}
     if($data->size === 9){$size = 'アタマ〜アタマ半';}
     if($data->size === 10){$size = 'アタマ半〜ダブル';}
+
+    var_dump($size);
     
     return $size;
   }

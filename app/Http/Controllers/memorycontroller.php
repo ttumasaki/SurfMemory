@@ -26,13 +26,21 @@ class MemoryController extends Controller
                         ->select('id','date','point','size','w_condition','number','state','direction','people')
                         ->orderBy('date','desc')
                         ->get();
-
     
         $memories = collect($data)->all();
+        
+        echo('<pre>');
+        var_dump($data);
+        echo('<pre>');
+
         optional($memories);
 
-        dd($memories);
-        // $memories = Memory::first();
+        echo('<pre>');
+        var_dump($memories);
+        echo('<pre>');
+        // var_dump($memories);
+
+        // $memories = Memory::all();
 
 
         $size =CheckFormData::checkSize($memories);

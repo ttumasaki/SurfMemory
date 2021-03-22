@@ -15,12 +15,6 @@
 そんな手助けができればと思ってこのアプリを開発をしました。  
   
 
-## 【URL】  
-  
-
-## 【テスト用アカウント】  
-  
-
 ## 【利用方法】  
 1.アプリにログインをすると過去の波情報を最新から降順に  
 &nbsp;&nbsp;時系列で確認ができます。  
@@ -62,9 +56,7 @@
 &nbsp;休日は平日に溜まったストレスを発散するためにも、自分の趣味である  
 &nbsp;サーフィンを思い切り楽しみたいと考えている。  
   
-## 【実装した機能についてのGIFと説明】  
-  
-  
+
 ## 【実装予定の機能】
 1.会員登録機能を実装。  
 2.投稿をした会員のみが情報の編集、削除ができる様にする。  
@@ -72,5 +64,15 @@
   
 ## 【データベース設計】
   
+　Memoryテーブル
+| Column      | Type     | Optioin     |
+| ----------- | -------- | ----------- |
+| point       | string   | null: false |
+| data        | datetime | null: false |
+| size        | integer  | null: false |
+| w_condition | integer  | null: false |
+| number      | integer  | null: false |
+| state       | integer  | null: false |
+| direction   | integer  | null: false |
+| people      | integer  | null: false |
 
-## 【ローカルでの動作方法】
